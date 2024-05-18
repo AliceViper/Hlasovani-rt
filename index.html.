@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hlasování na předsedu R-Týmu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        h1, h2 {
+            color: #4CAF50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hlasování na předsedu R-Týmu</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Základní informace o R-Týmu</h2>
+            <p>R-Tým je skupina zaměřená na dosažení společných cílů v různých oblastech. Naším cílem je spolupracovat a podporovat se navzájem.</p>
+        </section>
+        <section>
+            <h2>Hlasování</h2>
+            <form id="voteForm">
+                <label for="candidate">Hlasujte pro kandidáta:</label>
+                <input type="text" id="candidate" name="candidate" placeholder="Jméno kandidáta" required>
+                <button type="submit">Hlasovat</button>
+            </form>
+        </section>
+        <section>
+            <h2>Přihláška</h2>
+            <form id="applyForm">
+                <label for="name">Jméno:</label>
+                <input type="text" id="name" name="name" placeholder="Vaše jméno" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Váš e-mail" required>
+                <label for="reason">Proč chcete být předsedou:</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="Důvod" required></textarea>
+                <button type="submit">Přihlásit se</button>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('voteForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Váš hlas byl odeslán!');
+        });
+
+        document.getElementById('applyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Vaše přihláška byla odeslána!');
+        });
+    </script>
+</body>
+</html>
